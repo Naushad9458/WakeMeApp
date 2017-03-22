@@ -15,5 +15,18 @@
         android:text="Enter Station Name"
         android:id="@+id/stationCode"
         android:padding="10dp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stationCode"
+        android:text="Start GPS Service"
+        android:id="@+id/start"
+        android:onClick="startGPS"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stop Service"
+        android:layout_below="@+id/start"
+        android:onClick="stopGps"/>
 
 </RelativeLayout>

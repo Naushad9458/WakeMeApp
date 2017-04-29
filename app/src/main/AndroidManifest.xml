@@ -4,19 +4,41 @@
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="@string/app_brand_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:label="@string/set_up_alarm"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <receiver android:name=".Receiver" />
+
+        <service android:name=".PlaySound" />
+        <service android:name=".FetchLocation" />
+
+        <activity
+            android:name=".TurnOff"
+            android:launchMode="singleTop"
+            android:label="@string/app_brand_name"/>
+        <activity android:name=".GpsAlarm"
+            android:label="@string/travel_alarm"/>
+        <activity android:name=".SetGpsAlarm"
+            android:label="@string/travel_alarm"/>
+        <activity android:name=".Home"
+
+            android:label="@string/app_brand_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,15 +46,19 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".Receiver" />
+        <provider
+            android:name=".AlarmContentProvider"
+            android:authorities="com.example.n5050.demoapp"
+            android:exported="false" />
 
-        <service android:name=".PlaySound" />
-        <service android:name=".FetchLocation"/>
+        <activity android:name=".SettingsActivity"
+            android:label="@string/app_setting"/>
+        <activity android:name=".SplashScreen">
 
-        <activity
-            android:name=".TurnOff"
-            android:launchMode="singleTop" />
-        <activity android:name=".GpsAlarm"></activity>
+        </activity>
+        <activity android:name=".SelectTone"
+            android:theme="@android:style/Theme.Holo.Dialog"
+            android:label="Select Tone"></activity>
     </application>
 
 </manifest>

@@ -9,24 +9,55 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.n5050.demoapp.GpsAlarm">
 
-    <AutoCompleteTextView
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter Station Name"
-        android:id="@+id/stationCode"
-        android:padding="10dp" />
+        android:id="@+id/stationName"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"
+        android:gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:drawableLeft="@drawable/ic_home_black_48px"/>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/coordinates"
+        android:layout_below="@+id/stationName"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:drawableLeft="@drawable/ic_location_on_black_48px"
+
+        />
+
+
+
+
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/alarmDistance"
+        android:layout_below="@+id/coordinates"
+        android:entries="@array/spinnerItems"
+        android:padding="10dp">
+    </Spinner>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/stationCode"
-        android:text="Start GPS Service"
+        android:layout_below="@+id/alarmDistance"
+        android:text="SET UP ALARM"
         android:id="@+id/start"
+        android:padding="16dp"
+        android:layout_margin="5dp"
+        android:background="@color/colorBlueLight"
         android:onClick="startGPS"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Stop Service"
-        android:layout_below="@+id/start"
-        android:onClick="stopGps"/>
+
 
 </RelativeLayout>

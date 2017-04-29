@@ -16,13 +16,16 @@
     <TimePicker
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/timePicker" />
+        android:id="@+id/timePicker"
+        android:timePickerMode="spinner"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Set Alarm"
+        android:textSize="15sp"
+        android:background="@color/colorBlueLight"
         android:id="@+id/setAlarmButton"
         android:layout_below="@+id/timePicker"
-        android:paddingTop="10dp"
+        android:padding="16dp"
         android:onClick="startAlarm"/>
 </RelativeLayout>

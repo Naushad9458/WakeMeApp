@@ -1,8 +1,33 @@
 <resources>
     <string name="app_name">DemoApp</string>
+    <string name="set_up_alarm">Set up Alarm</string>
+    <string name="travel_alarm">Travel Alarm</string>
+    <string name="app_setting">Settings</string>
+    <string name="app_brand_name">WakeMeApp</string>
+
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+
+    <string-array name="spinnerItems">
+        <item>WakeMeUp 500m before destination</item>
+        <item>WakeMeUp 5KM before Destination</item>
+        <item>WakeMeUp 10KM before Destination</item>
+        <item>WakeMeUp 15KM before Destination</item>
+    </string-array>
+    <string-array name="distance">
+        <item>500</item>
+        <item>5000</item>
+        <item>10000</item>
+        <item>15000</item>
+    </string-array>
+    <string-array name="alarmTone">
+        <item>Mozart cvxc</item>
+        <item>Mozart bvbv</item>
+        <item>Hans Zimmer -Gladiator</item>
+        <item>Hans Zimmer -Inception</item>
+    </string-array>
 </resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.n5050.demoapp.Home">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MATH ALARM"
+        android:padding="16dp"
+        android:textSize="20sp"
+        android:layout_margin="5dp"
+        android:background="@color/colorBlueLight"
+        android:drawableLeft="@drawable/ic_alarm_add_black_48px"
+        android:id="@+id/setMathAlarm"
+        android:onClick="openAlarmActivity"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TRAVEL ALARM"
+        android:padding="16dp"
+        android:textSize="20sp"
+        android:layout_margin="5dp"
+        android:background="@color/colorBlueLight"
+        android:drawableLeft="@drawable/ic_directions_railway_black_48px"
+        android:layout_below="@+id/setMathAlarm"
+        android:id="@+id/setTravelAlarm"
+        android:onClick="openTravelAlarm"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/activeLabel"
+        android:layout_below="@+id/setTravelAlarm"
+        android:text="ACTIVE ALARMS"
+        android:textSize="15sp"
+        android:padding="16dp"
+        android:gravity="center"
+        android:drawableLeft="@drawable/ic_alarm_on_black_24dp"
+        android:background="@android:color/holo_green_light"
+        android:textColor="@android:color/white"/>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rv_alarm_list"
+        android:layout_below="@+id/activeLabel">
+
+
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

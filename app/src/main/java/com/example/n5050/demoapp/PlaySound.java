@@ -14,8 +14,10 @@ public class PlaySound extends Service {
         return null;
     }
     public void onCreate(){
-        mp=MediaPlayer.create(this,R.raw.ring);
+        mp=MediaPlayer.create(this,R.raw.mozart);
         mp.setLooping(true);
+
+        mp.setVolume(1.0f,1.0f);
 
     }
     public void onDestroy(){

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.n5050.demoapp.SetGpsAlarm">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_location_black_48px"
+        android:layout_centerHorizontal="true"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:id="@+id/locIcon"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Station Code"
+        android:id="@+id/stationCode"
+        android:padding="16dp"
+        android:layout_below="@+id/locIcon"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stationCode"
+        android:text="PROCEED"
+        android:drawableRight="@drawable/ic_navigate_next_black_48px"
+        android:padding="16dp"
+        android:textSize="15dp"
+        android:background="@color/colorBlueLight"
+        android:layout_margin="5dp"
+        android:onClick="fetchData"
+        android:id="@+id/btnProceed"/>
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnProceed"
+        android:visibility="gone"
+        android:gravity="center_horizontal"
+        android:padding="25dp"
+        android:textSize="15sp"
+        android:drawableLeft="@drawable/ic_alarm_on_black_24dp"
+        android:background="@android:color/holo_green_light"
+        android:textColor="@android:color/white"
+        android:id="@+id/alarmDetails"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alarmDetails"
+        android:id="@+id/deleteAlarm"
+        android:onClick="deleteAlarm"
+        android:src="@drawable/ic_delete_forever_black_48px"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:minWidth="68dp"
+        android:minHeight="68dp"
+        android:padding="16dp"
+        android:layout_margin="5dp"
+        android:background="@android:color/white"/>
+
+</RelativeLayout>
